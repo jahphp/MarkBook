@@ -1,0 +1,37 @@
+<idea-plugin>
+  <id>com.do.hp.mark.book.id</id>
+  <name>MarkBook</name>
+  <version>1.0</version>
+  <vendor email="1271769449@qq.com" url="http://www.hp.com">hp</vendor>
+
+  <description><![CDATA[
+     笔记插件<br>
+    <em>支持用户在idea里选择需要的内容,生成markdown格式的笔记.</em>
+ ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes1 here.<br>
+      <em>most HTML tags1 may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow factoryClass="com.hp.window.NoteWindowList" id="MarkBook" anchor="right"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="PopActionID" class="com.hp.action.PopAction" text="AddMarkBook" description="添加笔记">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl M"/>
+    </action>
+  </actions>
+
+</idea-plugin>
