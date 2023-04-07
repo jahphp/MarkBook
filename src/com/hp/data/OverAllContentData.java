@@ -36,6 +36,7 @@ public class OverAllContentData {
     public static DefaultTableModel TABLE_MODEL = new DefaultTableModel(null,COLUMN_NAME);
 
     public static  void  clear(){
-       CONTENT_DATA_LIST = null;
+       CONTENT_DATA_LIST.clear();
+       TABLE_MODEL.setDataVector(null,COLUMN_NAME);
     }
 }

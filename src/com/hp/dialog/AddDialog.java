@@ -59,6 +59,7 @@ public class AddDialog extends DialogWrapper {
             OverAllContentData.TABLE_MODEL.addRow(DataConvert.getStringArr(contentData));
             //关闭窗口
             MessageDialogBuilder.yesNo("操作结果","添加成功!").show();
+            AddDialog.this.dispose();
         });
         dialogPanel.add(button);
         return dialogPanel;
